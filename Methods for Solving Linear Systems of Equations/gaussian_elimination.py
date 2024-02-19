@@ -87,7 +87,7 @@ def backward_substitution(mat):
 if __name__ == '__main__':
     # Date: 19.02.2024
     # Group: Eytan Stryzhack 336244959, Daniel Boguslavsky 207915729, Shifra Avigdor 207067125, David Moalem 203387337
-    # Git:[
+    # Git: https://github.com/shifraa/Shifra-Numerical-analysis-task-1
     # Name: Shifra Avigdor 207067125
 
     # np.set_printoptions(suppress=True, precision=)
