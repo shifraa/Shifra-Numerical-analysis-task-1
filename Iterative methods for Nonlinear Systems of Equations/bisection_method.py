@@ -54,8 +54,8 @@ def find_all_roots(f, a, b, tol=1e-6):
     return roots
 
 if __name__ == '__main__':
-    f = lambda x: x**2-x
-    start = 1
+    f = lambda x: (x**2 -7*x +3)/6*x
+    start = 0
     end = 3
 
     roots = find_all_roots(f, start, end)
