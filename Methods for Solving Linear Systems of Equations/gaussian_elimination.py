@@ -85,16 +85,13 @@ def backward_substitution(mat):
 
 
 if __name__ == '__main__':
-    # Date: 19.02.2024
-    # Group: Eytan Stryzhack 336244959, Daniel Boguslavsky 207915729, Shifra Avigdor 207067125, David Moalem 203387337
-    # Git: https://github.com/shifraa/Shifra-Numerical-analysis-task-1
-    # Name: Shifra Avigdor 207067125
 
     # np.set_printoptions(suppress=True, precision=)
-    A_b = ([[1, 2, 3, 4, 5],
-            [2, 3, 4, 5, 1],
-            [8, 8, 8, 8, 1],
-            [24, 15, 22, 1, 8]])
+    A_b = ([[2,3, 4,5,6],
+           [-5,3, 4, -2 , 3],
+            [4, -5,-2 , 2 , 6],
+            [4, 5,-1 , -2 , -3],
+            [5 ,5 ,3 ,-3 ,5] ])
 
     print(np.array(A_b))
     np.array(A_b)

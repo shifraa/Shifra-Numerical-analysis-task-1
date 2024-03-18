@@ -59,7 +59,9 @@ def jacobi_iterative(A, b, X0, TOL=1e-16, N=200):
 
 if __name__ == "__main__":
 
-    A = np.array([[3, -1, 1], [0, 1, -1], [1, 1, -2]])
+    A = np.array([[3, -1, 1],
+                  [0, 1, -1],
+                  [1, 1, -2]])
     b = np.array([4, -1, -3])
 
     x = np.zeros_like(b, dtype=np.double)
