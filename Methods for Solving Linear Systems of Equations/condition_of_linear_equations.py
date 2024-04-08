@@ -43,9 +43,9 @@ def condition_number(A):
 
 
 if __name__ == '__main__':
-    A = np.array([[2, 1.7, -2.5],
-                  [1.24, -2, -0.5],
-                  [3, 0.2, 1]])
+    A = np.array([[1, 0, 0],
+                  [3, 5, 0],
+                  [2, 1, 8]])
     cond = condition_number(A)
 
     print(bcolors.OKGREEN, "\n condition number: ", cond, bcolors.ENDC)

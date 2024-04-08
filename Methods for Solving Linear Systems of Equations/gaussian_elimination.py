@@ -1,6 +1,6 @@
 import numpy as np
 from colors import bcolors
-from matrix_utility import swap_row, scalar_multiplication_elementary_matrix
+from matrix_utility import swap_row ,scalar_multiplication_elementary_matrix
 
 
 def gaussianElimination(mat):
@@ -14,7 +14,7 @@ def gaussianElimination(mat):
             return "Singular Matrix (Inconsistent System)"
         else:
             return "Singular Matrix (May have infinitely many solutions)"
-    # print(np.array(mat))
+    print(np.array(mat))
     # if matrix is non-singular: get solution to system using backward substitution
     return backward_substitution(mat)
 
@@ -36,12 +36,7 @@ def forward_substitution(mat):
         if pivot_row != k:
             swap_row(mat, k, pivot_row)
 
-        for i in range(N):
-            if mat[i][i] == 0:
-                pass
-            elif not round(mat[i][i], 4):
-                mat[i][i] = 0
-                return N - 1
+
 
         # Normalize the current row by dividing all elements by the pivot element (diagonal element)
         pivot_element = mat[k][k]
@@ -58,9 +53,7 @@ def forward_substitution(mat):
 
             # filling lower triangular matrix with zeros
             mat[i][k] = 0
-        # for i in range(N):
 
-    print(np.array(mat))
     return -1
 
 
@@ -79,22 +72,19 @@ def backward_substitution(mat):
             x[i] -= mat[i][j] * x[j]
 
         x[i] = (x[i] / mat[i][i])
-        # print(x[i])
+
 
     return x
 
 
 if __name__ == '__main__':
 
-    # np.set_printoptions(suppress=True, precision=)
-    A_b = ([[2,3, 4,5,6,92],
-           [-5,3, 4, -2 , 3,22],
-            [4, -5,-2 , 2 , 6,42],
-            [4, 5,-1 , -2 , -3,-22],
-            [5 ,5 ,3 ,-3 ,5,41] ])
-
-    print(np.array(A_b))
+    A_b = np.array([[2, 3, 4, 5],
+                    [2, 3, 4, 5]
+                    [2, 3, 4, 5]
+                    [2, 3, 4, 5]])
     np.array(A_b)
+
 
     result = gaussianElimination(A_b)
 

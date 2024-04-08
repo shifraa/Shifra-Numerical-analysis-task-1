@@ -7,7 +7,6 @@ This repository is an altered copy of [lihiSabag](https://github.com/lihiSabag) 
 Which is part of the first assigment of the academic course - Numerical-Analysis in [SCE - Shamoon College of Engineering](https://sce.ac.il).  
 
 ### Contributers
-Daniel Boguslavsky
+Daniel
 Ethan
 Shifra
-David

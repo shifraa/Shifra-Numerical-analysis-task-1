@@ -35,7 +35,7 @@ def bisection_method(f, a, b, tol=1e-6):
 
     return c
 
-def find_all_roots(f, a, b, tol=1e-6):
+def find_all_roots(f, a, b, tol=1e-4):
     roots = []
     x = np.linspace(a, b, 1000)
 
@@ -47,14 +47,24 @@ def find_all_roots(f, a, b, tol=1e-6):
             interval = sp.Interval(x[i], x[i + 1])
             try:
                 root = sp.nsolve(f_sym, (interval.start + interval.end)/2, tol=tol)
-                roots.append(root)
+                # Check if the root is not already in the list with some tolerance
+                if all(abs(root - r) > tol for r in roots):
+                    roots.append(root)
             except ValueError:
                 print(f"Could not find root within tolerance in interval {interval}")
 
     return roots
 
 if __name__ == '__main__':
-    f = lambda x: (x**2 -7*x +3)/6*x
+    # Git:https://github.com/danielbogus99/Numerical-analysis-task-1
+    # Date: 18.03.2024
+    # Group: Eytan Stryzhack 336244959,
+    # Daniel Boguslavsky 207915729
+    # , Shifra Avigdor 207067125,
+    # David Moalem 203387337
+
+    # Name: Daniel Boguslavsky
+    f = lambda x: (2*x**2+7*x**3-6)/(3*x**2-6)
     start = 0
     end = 3
 

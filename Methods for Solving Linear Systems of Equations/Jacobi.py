@@ -26,7 +26,7 @@ Returns variables:
 
 """
 
-def jacobi_iterative(A, b, X0, TOL=1e-16, N=200):
+def jacobi_iterative(A, b, X0, TOL=1e-16, N=1000):
     n = len(A)
     k = 1
 
@@ -58,11 +58,10 @@ def jacobi_iterative(A, b, X0, TOL=1e-16, N=200):
 
 
 if __name__ == "__main__":
-
-    A = np.array([[3, -1, 1],
-                  [0, 1, -1],
-                  [1, 1, -2]])
-    b = np.array([4, -1, -3])
+    A_b = np.array([[2, 3, 4],
+                    [1, 3, 2],
+                    [2, 1, 8]])
+    b = np.array([2, 4, 8])
 
     x = np.zeros_like(b, dtype=np.double)
     solution = jacobi_iterative(A, b, x)

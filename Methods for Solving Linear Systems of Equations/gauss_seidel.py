@@ -33,18 +33,16 @@ def gauss_seidel(A, b, X0, TOL=1e-16, N=200):
         X0 = x.copy()
 
     print("Maximum number of iterations exceeded")
-    return tuple(x)
+    return "not found"
 
 
 if __name__ == '__main__':
-
-    A = np.array([[3, -1, 1],
-                  [0, 1, -1],
-                  [1, 1, -2]])
-    b = np.array([4, -1, -3])
+    A_b = np.array([[2, 1, 2],
+                    [4, 2, 2],
+                    [5, 1, 8]])
+    b = np.array([2, 4, 8])
     X0 = np.zeros_like(b)
 
     solution =gauss_seidel(A, b, X0)
     print(bcolors.OKBLUE,"\nApproximate solution:", solution)
-
 

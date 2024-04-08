@@ -1,4 +1,5 @@
 import jacobi_utilities
+import math
 from sympy import *
 
 x = Symbol('x')
@@ -89,9 +90,9 @@ def natural_cubic_spline(f, x0):
 
 
 if __name__ == '__main__':
-    f = [(1, 1), (2, 2), (3, 1), (4, 1.5), (5, 1)]
-    x0 = 6
-
+    f = [(0, 0), (math.pi/6, 0.5), (math.pi/4, 0.7072), (math.pi/2, 1)]
+    x0 = math.pi/3
+    print(math.pi)
     print("func: " + str(f))
     print("x0 = " + str(x0) + "\n")
     natural_cubic_spline(f, x0)
