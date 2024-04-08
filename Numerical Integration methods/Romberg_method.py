@@ -38,13 +38,13 @@ def romberg_integration(func, a, b, n):
 
 
 def f(x):
-    return math.sin(x**2 + 5*x + 6) / (2 * math.e**-x)
+    return math.sin(x**2 + 5*x + 6) / (2 * math.e**-x) # there is no problem with the definition domain
 
 
 if __name__ == '__main__':
     a = -0.5
     b = -0.7
-    n = 4
+    n = 20
     integral = romberg_integration(f, a, b, n)
 
     print( f" Division into n={n} sections ")

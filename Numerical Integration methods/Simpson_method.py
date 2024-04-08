@@ -42,7 +42,7 @@ def simpsons_rule(f, a, b, n):
 
 if __name__ == '__main__':
 
-    f = lambda x: math.sin(x**2 + 5*x + 6) / (2 * math.e**-x)
+    f = lambda x: math.sin(x**2 + 5*x + 6) / (2 * math.e**-x) # there is no problem with the definition domain
 
     n = 20
     a = -0.5
